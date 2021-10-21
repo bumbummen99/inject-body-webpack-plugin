@@ -34,5 +34,5 @@ jobs:
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.npmToken }}
-          package: dist/package/production
+          package: dist/package/production/package.json
           access: public
