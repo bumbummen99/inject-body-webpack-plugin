@@ -26,11 +26,13 @@ jobs:
         uses: jaid/action-jest@master
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-
+          
+      - name: Build
+        run: npm build:prod
+      
       - name: Publish
-        uses: jaid/action-publish@master
+        uses: JS-DevTools/npm-publish@v1
         with:
-          githubToken: ${{ secrets.packagesToken }}
-          npmPrepareScript: build:prod
-          publishDirectory: dist/package/production
-          npmToken: ${{ secrets.npmToken }}
+          token: ${{ secrets.npmToken }}
+          package: dist/package/production
+          access: public
