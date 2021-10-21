@@ -28,7 +28,7 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Build
-        run: npm build:prod
+        run: npm run build:prod
       
       - name: Publish
         uses: JS-DevTools/npm-publish@v1
