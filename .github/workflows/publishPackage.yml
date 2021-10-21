@@ -20,7 +20,7 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Rename package
-        run: sed -i 's/inject-body-webpack-plugin/@skyraptor\/inject-body-webpack-plugin/' package.json
+        run: sed -i 's/"inject-body-webpack-plugin"/"@skyraptor\/inject-body-webpack-plugin"/' package.json
 
       - name: Jest
         uses: jaid/action-jest@master
