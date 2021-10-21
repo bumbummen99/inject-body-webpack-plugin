@@ -1,6 +1,6 @@
 {
   "webpackConfigJaid": "nodeClass",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "peerDependencies": {
     "html-webpack-plugin": "^5.3.1"
