@@ -44,5 +44,8 @@
     "url": "https://github.com/jaid/inject-body-webpack-plugin"
   },
   "homepage": "https://github.com/Jaid/inject-body-webpack-plugin",
-  "type": "module"
+  "type": "module",
+  "keywords": [
+    "hacktoberfest"
+  ]
 }
