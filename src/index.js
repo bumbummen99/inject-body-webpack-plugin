@@ -42,9 +42,9 @@ export default class InjectBodyPlugin {
         debug("tap: html-webpack-plugin beforeEmit")
         debug("Before: %s", data.html)
         if (this.options.position === "end") {
-          data.html = insertStringBefore.default(data.html, this.options.endTag, this.options.content)
+          data.html = insertStringBefore(data.html, this.options.endTag, this.options.content)
         } else {
-          data.html = insertStringAfter.default(data.html, this.options.startTag, this.options.content)
+          data.html = insertStringAfter(data.html, this.options.startTag, this.options.content)
         }
         debug("After: %s", data.html)
       })
