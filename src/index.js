@@ -36,9 +36,9 @@ export default class InjectBodyPlugin {
    */
   apply(compiler) {
     debug("Options: %o", this.options)
-    compiler.hooks.compilation.tap(process.env.REPLACE_PKG_NAME, compilation => {
+    compiler.hooks.compilation.tap('inject-body-plugin', compilation => {
       debug("tap: compilation")
-      HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tap(process.env.REPLACE_PKG_NAME, data => {
+      HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tap('inject-body-plugin', data => {
         debug("tap: html-webpack-plugin beforeEmit")
         debug("Before: %s", data.html)
         if (this.options.position === "end") {
