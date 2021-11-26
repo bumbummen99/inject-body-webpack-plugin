@@ -1,8 +1,8 @@
 /** @module inject-body-webpack-plugin */
 
 import HtmlWebpackPlugin from "html-webpack-plugin"
-import { default as insertStringAfter } from "insert-string-after"
-import { default as insertStringBefore } from "insert-string-before"
+import insertStringAfter from "insert-string-after"
+import insertStringBefore from "insert-string-before"
 
 import debug from "./lib/debug.js"
 
@@ -42,9 +42,9 @@ export default class InjectBodyPlugin {
         debug("tap: html-webpack-plugin beforeEmit")
         debug("Before: %s", data.html)
         if (this.options.position === "end") {
-          data.html = insertStringBefore(data.html, this.options.endTag, this.options.content)
+          data.html = insertStringBefore.default(data.html, this.options.endTag, this.options.content)
         } else {
-          data.html = insertStringAfter(data.html, this.options.startTag, this.options.content)
+          data.html = insertStringAfter.default(data.html, this.options.startTag, this.options.content)
         }
         debug("After: %s", data.html)
       })
